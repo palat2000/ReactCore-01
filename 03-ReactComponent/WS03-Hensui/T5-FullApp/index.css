@@ -1,16 +1,106 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%; // root 16px * 0.625 == 10px
+  font-size: 62.5%; // root 16px * 0.625 == 10px
 }
 
 body {
-    height: 100vh;
-    font-family: 'urbanist', sans-serif;
+  height: 100vh;
+  font-family: "urbanist", sans-serif;
+}
+
+header h1 {
+  color: #29005f;
+  font-size: 42px;
+  padding-bottom: 20px;
+}
+
+.container-root {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  height: 100%;
+}
+
+img {
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+.logo {
+  font-size: 36px;
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.logo a {
+  color: #29005f;
+}
+
+.container {
+  /* width: 300px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 160px;
+  /* gap: 20px; */
+}
+
+.info-text p {
+  padding-bottom: 20px;
+  font-size: 18px;
+}
+
+.contact-us {
+  width: 100%;
+}
+form {
+  display: flex;
+  /* width: 100%; */
+}
+
+form input {
+  padding: 10px 10px;
+  border-radius: 3px;
+  font-size: 1.5em;
+}
+
+form input[type="email"] {
+  border: 2px solid #29005f;
+  margin-right: 5px;
+  flex: 1;
+  color: #d4d4d4;
+}
+
+form input[type="submit"] {
+  color: #fff;
+  background: #29005f;
+  border: none;
+  padding: 0 50px;
 }
