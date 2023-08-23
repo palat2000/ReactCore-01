@@ -28,7 +28,7 @@ function ContactUs() {
     <div className="contact-us">
       <form action="">
         <input type="email" placeholder="e-mail" />
-        <input type="submit" />
+        <input type="submit" value="Submit"/>
       </form>
     </div>
   );
