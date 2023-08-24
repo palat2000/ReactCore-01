@@ -49,7 +49,7 @@ function Avatar(props) {
 function AvatarGroup(props) {
   return (
     <div className="container">
-      {peopleList.map((personObj) => (
+      {props.data.map((personObj) => (
         <Avatar alt={personObj.name} source={personObj.src} />
       ))}
       {/* {list} */}
@@ -59,4 +59,4 @@ function AvatarGroup(props) {
 
 const domRoot = document.getElementById("root");
 const root = ReactDOM.createRoot(domRoot);
-root.render(<AvatarGroup data={people} />);
+root.render(<AvatarGroup data={peopleList} />);

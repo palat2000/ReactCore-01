@@ -1,37 +1,76 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%; // root 16px * 0.625 == 10px
+  font-size: 62.5%; // root 16px * 0.625 == 10px
 }
 
 body {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 h1 {
-    font-size: 4rem;
-    text-align: center;
-    margin: 3rem 0;
-    /* color: red; */
+  font-size: 4rem;
+  text-align: center;
+  margin: 3rem 0;
+  /* color: red; */
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: wheat;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: wheat;
+  height: 100vh;
 }
 
 .text-red {
-    color: red;
+  color: red;
 }
 
 .text-blue {
-    color: blue;
+  color: blue;
+}
+
+.container-todo {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  text-align: center;
+}
+
+.container-task {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.bar {
+  padding-bottom: 10px;
+  display: flex;
+}
+
+.search {
+  padding: 5px;
+  flex: 1;
+}
+.btn-submit {
+  padding: 5px;
+}
+
+.text {
+  font-size: 3rem;
+}
+.container-btn {
+  display: flex;
+  gap: 10px;
+  padding-left: 30px;
+}
+
+.btn {
+  padding: 10px;
 }

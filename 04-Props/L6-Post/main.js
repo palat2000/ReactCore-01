@@ -8,25 +8,49 @@ const post = [
   { id: 7, message: "Hello 6", date: "24-08-2023", name: "pond6" },
 ];
 
+// function ArrayPost(props) {
+//   return (
+//     <div className="container">
+//       <ul>
+//         {props.arr.map((x) => {
+//           return (
+//             <>
+//               <li>{x.name}</li>
+//               <li>{x.message}</li>
+//               <li>{x.date}</li>
+//             </>
+//           );
+//         })}
+//       </ul>
+//     </div>
+//   );
+// }
+
 function ArrayPost(props) {
   return (
     <div className="container">
       <ul>
-        {props.arr.map((x) => {
-          return (
-            <>
-              <li>{x.name}</li>
-              <li>{x.message}</li>
-              <li>{x.date}</li>
-            </>
-          );
-        })}
+        <li>{props.name}</li>
+        <li>{props.date}</li>
+        <li>{props.message}</li>
       </ul>
     </div>
+  );
+}
+
+function App(props) {
+  return (
+    <>
+      {props.data.map((obj) => {
+        return (
+          <ArrayPost name={obj.name} date={obj.date} message={obj.message} />
+        );
+      })}
+    </>
   );
 }
 
 const domRoot = document.getElementById("root");
 const root = ReactDOM.createRoot(domRoot);
 
-root.render(<ArrayPost arr={post} />);
+root.render(<App data={post} />);
