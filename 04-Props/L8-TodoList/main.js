@@ -1,10 +1,10 @@
 const todo = [
-  { task: "Task1" },
-  { task: "Task2" },
-  { task: "Task3" },
-  { task: "Task4" },
-  { task: "Task5" },
-  { task: "Task6" },
+  { task: "Task1", id: 1 },
+  { task: "Task2", id: 2 },
+  { task: "Task3", id: 3 },
+  { task: "Task4", id: 4 },
+  { task: "Task5", id: 5 },
+  { task: "Task6", id: 6 },
 ];
 
 function SearchBar() {
@@ -16,11 +16,15 @@ function SearchBar() {
   );
 }
 
-function Button() {
+function Button(props) {
   return (
     <div className="container-btn">
-      <button className="btn">Edit</button>
-      <button className="btn">Delete</button>
+      <button className="btn" id={props.id}>
+        Edit
+      </button>
+      <button className="btn" id={props.id}>
+        Delete
+      </button>
       {/* <input type="checkbox" /> */}
     </div>
   );
@@ -38,7 +42,7 @@ function ContainerTask(props) {
   return (
     <div className="container-task">
       <Task text={props.text} />
-      <Button />
+      <Button id={props.id} />
     </div>
   );
 }
@@ -49,7 +53,7 @@ function App() {
       <div className="container-todo">
         <SearchBar />
         {todo.map((obj) => (
-          <ContainerTask text={obj.task} />
+          <ContainerTask text={obj.task} id={obj.id} />
         ))}
       </div>
     </div>
